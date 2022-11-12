@@ -93,7 +93,6 @@ class World:
             raise Exception("the char representation is empty")
             exit(405)
         image_path = "../tiles/U.png"
-        print(os.getcwd())
         first_row=True
         final_image=cv2.imread("../tiles/U.png")
         if exists(image_path):
@@ -101,14 +100,12 @@ class World:
                 row=""
                 first=True
                 for charcode in i:
-                    print(charcode)
                     if first:
 
                         row= cv2.imread("../tiles/"+charcode+".png")
                         row= cv2.resize(row, dsize=(0, 0),
                                             fx=0.01, fy=0.01)
                         first=False
-                        print("first of the row")
                     else:
                         img1 = cv2.imread("../tiles/"+charcode+".png")
                         img1_s = cv2.resize(img1, dsize=(0, 0),

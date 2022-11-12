@@ -1,3 +1,7 @@
+# png files
+*.png
+*.xml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,6 +12,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.idea/
 build/
 develop-eggs/
 dist/
