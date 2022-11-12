@@ -15,11 +15,11 @@ def main():
     uncomment to see the current capabilites of this project
     """
     #perlin=perlin_noise_generation.Perlin(3,"",100,100)
-    #perlin.generate_noise()
+    #perlin.generate_simplified_noise()
     #perlin.display_noise()
     #myworld = world.World(100,100)
     #myworld.generate_char_representation(perlin.raw_noise)
     #myworld.print_char_world()
-    exit(0)
+    #myworld.as_png()
 
-main()
+    return 1

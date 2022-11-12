@@ -4,6 +4,10 @@ A tile can be considered as unit of display (eg a big pixel) or a patch of land/
 """
 from os.path import exists
 
+
+
+
+
 """
 Main class for tile, generic from wich every other tiles will ihnerit
 
@@ -25,7 +29,7 @@ class Tile:
         if exists(image_path):
             self.image_path = image_path
         else:
-            self.image_path(color + ".png")
+            self.image_path(char + ".png")
         self.coord = coord
         self.color = color
 
@@ -36,6 +40,7 @@ class Tile:
         print("   - coord : " + str(self.coord))
         print("   - color : " + str(self.color))
         print("   - class_id: " + str(self.class_id))
+
 
 """
 ========================= Specific tiles =======================
@@ -48,7 +53,6 @@ I plan to add 'affinity matrix' in each class to modify the chance of getting a 
     - ... 
 
 """
-
 
 """
 

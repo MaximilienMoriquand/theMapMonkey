@@ -1,8 +1,11 @@
 """
 This file contains all the world's attribute as it should be generated.
 """
+import random
 
-
+import cv2
+from os.path import exists
+import os
 def translate_noise_tile_id(value):
     if -0.2 > value:  # i fucking love python
         return 11  # deep water
@@ -85,3 +88,38 @@ class World:
                 add_me.append(translate_noise_char(element))
             self.char_representation.append(add_me)
 
+    def as_png(self):
+        if(self.char_representation==[]):
+            raise Exception("the char representation is empty")
+            exit(405)
+        image_path = "../tiles/U.png"
+        print(os.getcwd())
+        first_row=True
+        final_image=cv2.imread("../tiles/U.png")
+        if exists(image_path):
+            for i in self.char_representation:
+                row=""
+                first=True
+                for charcode in i:
+                    print(charcode)
+                    if first:
+
+                        row= cv2.imread("../tiles/"+charcode+".png")
+                        row= cv2.resize(row, dsize=(0, 0),
+                                            fx=0.01, fy=0.01)
+                        first=False
+                        print("first of the row")
+                    else:
+                        img1 = cv2.imread("../tiles/"+charcode+".png")
+                        img1_s = cv2.resize(img1, dsize=(0, 0),
+                                            fx=0.01, fy=0.01)
+                        row = cv2.hconcat([row, img1_s])
+
+                if first_row:
+                    final_image = row
+                    first_row=False
+                else:
+                    final_image=cv2.vconcat([final_image,row])
+            cv2.imwrite('../map/map.png',final_image)
+        else:
+            print("the file does not exist, please check the content of ../tiles/")
