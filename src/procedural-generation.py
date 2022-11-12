@@ -5,6 +5,11 @@ MIT license.
 """
 import perlin_noise_generation
 import world
+import argparse
+
+size = 10000
+output = "../map/"
+input = "../tile/"
 
 
 def generate_map():
@@ -24,5 +29,21 @@ def generate_map():
     print("the map is now saved in ~/./map/map.png")
 
 
+#
+# TODO:
+#       - parsing de json et class custom
+#       - output file path
+#       - size of the map
+
 if __name__ == "__main__":
-    generate_map()
+    parser = argparse.ArgumentParser(description="MapMonkey, create a 2d map with perlin's noise")
+    parser.add_argument("-s", "--size", nargs='*', metavar="num", type=int, default=1000,
+                        help="the size of the map (pixel)")
+    parser.add_argument("-o", "--output", nargs='1', metavar="string", type=str, default="../map/",
+                        help="path of the resulting map")
+    parser.add_argument("-l", "--load", nargs='1', metavar="string", type=str, default=None,
+                        help="Json containing all the customed tiles attribute")
+
+    args = parser.parse_args()
+    parser.print_help()
+    #generate_map()

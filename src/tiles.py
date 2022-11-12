@@ -29,7 +29,7 @@ class Tile:
         if exists(image_path):
             self.image_path = image_path
         else:
-            self.image_path(char + ".png")
+            self.image_path(self.char + ".png")
         self.coord = coord
         self.color = color
 
