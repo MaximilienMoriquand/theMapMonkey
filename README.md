@@ -16,7 +16,7 @@ pip install perlin-noise
 ## Usage
 The map will be in the folder map
 ```bash
-python3.9 procedural-generatio.py
+python3.9 procedural-generation.py
 ```
 You can change the texture of the tile in the tiles file
 
