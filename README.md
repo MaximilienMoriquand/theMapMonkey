@@ -1,4 +1,4 @@
-# procedural-generation
+# The MapMonkey
 small personnal project to experiment with procedural-generation and Perlin noise
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)                    
