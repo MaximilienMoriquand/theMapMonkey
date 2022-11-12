@@ -14,10 +14,11 @@ pip install perlin-noise
 ```
 
 ## Usage
-This is project is not finished yet, however if one want to have a try, he shall uncomment what's inside the main fonction in procedural_generation.py
+The map will be in the folder map
 ```bash
 python3.9 procedural-generatio.py
 ```
+You can change the texture of the tile in the tiles file
 
 ## License
 Do whatever you want with this, it's on [MIT](https://choosealicense.com/licenses/mit/)
