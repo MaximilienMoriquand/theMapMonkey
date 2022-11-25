@@ -20,7 +20,7 @@ def generate_map():
     print("===== GENERATING MAP =====")
     print("this process can be quite long (+-1mn)")
     perlin = perlin_noise_generation.Perlin(3, "", 100, 100)
-    perlin.generate_simplified_noise()
+    perlin.generate_noise()
     perlin.display_noise()
     myworld = world.World(100, 100)
     print("processing ...")
@@ -37,13 +37,7 @@ def generate_map():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MapMonkey, create a 2d map with perlin's noise")
-    parser.add_argument("-s", "--size", nargs='*', metavar="num", type=int, default=1000,
-                        help="the size of the map (pixel)")
-    parser.add_argument("-o", "--output", nargs='1', metavar="string", type=str, default="../map/",
-                        help="path of the resulting map")
-    parser.add_argument("-l", "--load", nargs='1', metavar="string", type=str, default=None,
-                        help="Json containing all the customed tiles attribute")
 
     args = parser.parse_args()
     parser.print_help()
-    #generate_map()
+    generate_map()
