@@ -15,7 +15,7 @@ pip install perlin-noise
 
 ## Usage
 The map will be in the folder map.
-*Please uncomment the line 49 of procedural-generation.py before launching the script*
+
 ```bash
 python3.9 procedural-generation.py
 ```
