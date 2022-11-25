@@ -20,6 +20,9 @@ The map will be in the folder map.
 python3.9 procedural-generation.py
 ```
 You can change the texture of the tile in the tiles file
+## Exemple:
+
+![generated map](./map/map.png)
 
 ## Possible amelioration 
 
