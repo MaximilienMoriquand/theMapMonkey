@@ -23,16 +23,10 @@ You can change the texture of the tile in the tiles file
 ## Exemple:
 
 ![generated map](./map/map.png)
+## What's next :
 
-## Possible amelioration 
-
-I'm currently on intense work (last year in engineer school, EPITA srs rpz), I can't do as much as i want to do with this project.
-Currently, I'm thinking about some amelioration:
-
-    - Optimisation with datascience panda tools
-    - Doing json parsing for custom class ( currently on this, but I don't know if I'll finish soon)
-    - Graphical application
-    - GPU computing with CUDA bridge (just dreaming ;-) ).
+I'm feeling like doing some turned base world simulation, so currently looking into it rn.
+My current goal is to implement some kind of structure (maybe home that evolve into village into town ...) that evolve under certain condition to see the outcome.
 
 Feel free to fork, raise an issue or even propose a fork I'll be glad to see someone continues my project.
 
